@@ -1,0 +1,15 @@
+{
+  "name": "cloudmodel",
+  "version": "1.0.0",
+  "description": "cloud code data models",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@dev.lai.io:2345/diffusion/CMDL/cloudmodel.git"
+  },
+  "author": "William Qi <wqi@lai.io> (http://lai.io)",
+  "license": "ISC"
+}
