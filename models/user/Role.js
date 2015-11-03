@@ -8,9 +8,7 @@
 var av;
 try {
     var env = process.env.NODE_ENV;
-    if (env) {
-        av = require('avoscloud-sdk').AV;
-    }
+    av = require('avoscloud-sdk').AV;
 }
 catch (ex) {
     if (__local) {
@@ -24,7 +22,7 @@ catch (ex) {
     else {
         // Avoscloud-code test environment in the cloud
         av = AV;
-    }
+    } 
 }
 
 /*
@@ -33,7 +31,7 @@ catch (ex) {
 |--------------------------------------------------------------------------
 */
 
-var User = av.Object.extend('_Role', {
+var Role = av.Object.extend('_Role', {
 
     initialize: function() {
 
