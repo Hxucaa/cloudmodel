@@ -4,26 +4,7 @@
 |--------------------------------------------------------------------------
 */
 'use strict';
-
-var av;
-try {
-    var env = process.env.NODE_ENV;
-    av = require('avoscloud-sdk').AV;
-}
-catch (ex) {
-    if (__local) {
-        // Avoscloud-code local development environment
-        av = AV;
-    }
-    else if (__production) {
-        // Avoscloud-code production environment in the cloud
-        av = AV;
-    }
-    else {
-        // Avoscloud-code test environment in the cloud
-        av = AV;
-    } 
-}
+var Cloud = require('../cloud');
 
 /*
 |--------------------------------------------------------------------------
@@ -31,20 +12,8 @@ catch (ex) {
 |--------------------------------------------------------------------------
 */
 
-var Address = av.Object.extend('Address', {
-
+var Address = Cloud.AV.Object.extend('Address', {
     initialize: function() {
-
-        Object.defineProperty(this, 'objectId', {
-            get: function() {
-                return this.get('objectId');
-            },
-            set: function(value) {
-                this.set('objectId', value);
-            },
-            enumerable: true
-        });
-
         Object.defineProperty(this, 'streetLine1', {
             get: function() {
                 return this.get('streetLine1');
@@ -121,26 +90,6 @@ var Address = av.Object.extend('Address', {
             },
             set: function(value) {
                 this.set('isActive', value);
-            },
-            enumerable: true
-        });
-
-        Object.defineProperty(this, 'createdAt', {
-            get: function() {
-                return this.get('createdAt');
-            },
-            set: function(value) {
-                this.set('createdAt', value);
-            },
-            enumerable: true
-        });
-
-        Object.defineProperty(this, 'updatedAt', {
-            get: function() {
-                return this.get('updatedAt');
-            },
-            set: function(value) {
-                this.set('updatedAt', value);
             },
             enumerable: true
         });

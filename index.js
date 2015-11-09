@@ -1,3 +1,8 @@
 var CloudModel = require('./models');
-module.exports = CloudModel;
+var Cloud = require('./models/cloud');
+
+exports.CM = CloudModel;
+exports.config = function(appid, apikey, masterkey, useMaster) {
+	Cloud.initialize(appid, apikey, masterkey, useMaster);;
+}
 
