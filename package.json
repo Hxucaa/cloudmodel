@@ -1,6 +1,6 @@
 {
   "name": "cloudmodel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "cloud code data models",
   "main": "index.js",
   "scripts": {
