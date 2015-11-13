@@ -4,7 +4,6 @@
 |--------------------------------------------------------------------------
 */
 'use strict';
-var Cloud = require('../cloud');
 
 /*
 |--------------------------------------------------------------------------
@@ -12,32 +11,34 @@ var Cloud = require('../cloud');
 |--------------------------------------------------------------------------
 */
 
-var Role = Cloud.AV.Object.extend('_Role', {
+var Role = function(av) {
+    return av.Object.extend('_Role', {
 
-    initialize: function() {
-        Object.defineProperty(this, 'name', {
-            get: function() {
-                return this.get('name');
-            },
-            set: function(value) {
-                this.set('name', value);
-            },
-            enumerable: true
-        });
+        initialize: function() {
+            Object.defineProperty(this, 'name', {
+                get: function() {
+                    return this.get('name');
+                },
+                set: function(value) {
+                    this.set('name', value);
+                },
+                enumerable: true
+            });
 
-        Object.defineProperty(this, 'isActive', {
-            get: function() {
-                return this.get('isActive');
-            },
-            set: function(value) {
-                this.set('isActive', value);
-            },
-            enumerable: true
-        });
-    }
+            Object.defineProperty(this, 'isActive', {
+                get: function() {
+                    return this.get('isActive');
+                },
+                set: function(value) {
+                    this.set('isActive', value);
+                },
+                enumerable: true
+            });
+        }
 
-}, {
+    }, {
 
-});
+    });
+};
 
 module.exports = Role;
