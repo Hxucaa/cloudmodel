@@ -21,5 +21,10 @@ module.exports = {
   UserPhoto: require("./user/UserPhoto.js")(AV),
   UserProfile: require("./user/UserProfile.js")(AV),
   UserRole: require("./user/UserRole.js")(AV),
-  UserStatistics: require("./user/UserStatistics.js")(AV)
+  UserStatistics: require("./user/UserStatistics.js")(AV),
+
+  // Enums
+  ImageType: require("./enum/ImageType"),
+  UserStatus: require("./enum/UserStatus"),
+  UserType: require("./enum/UserType")
 }
