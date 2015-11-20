@@ -19,6 +19,7 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-eslint": "^1.1.0",
+    "gulp-shell": "^0.5.1",
     "gulp-util": "^3.0.7",
     "ink-docstrap": "^0.5.2",
     "jsdoc": "^3.4.0",

@@ -8,6 +8,7 @@ var gulp = require("gulp");
 var runSequence = require("run-sequence");
 var gutil = require("gulp-util");
 var eslint = require("gulp-eslint");
+var shell = require("gulp-shell");
 var pkg    = require("./package.json");
 
 gulp.task("default", function() {
@@ -36,7 +37,7 @@ gulp.task("lint", function () {
 });
 
 gulp.task("lint:w", ["lint"], function() {
-  gulp.watch([["models/**/*.js", "index.js"], ["lint"]);
+  gulp.watch(["models/**/*.js", "index.js"], ["lint"]);
 });
 
 gulp.task("jsdoc", function() {
