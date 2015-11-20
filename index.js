@@ -1,1 +1,3 @@
-module.exports = require('./models');
+"use strict"
+
+module.exports = require("./models")

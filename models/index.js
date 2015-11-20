@@ -1,23 +1,25 @@
-var av = require('./cloud.js');
+"use strict"
+
+var AV = require("avoscloud-sdk")
 
 module.exports = {
-    Business: require('./business/Business.js')(av),
-    BusinessHour: require('./business/BusinessHour.js')(av),
-    BusinessStatistics: require('./business/BusinessStatistics.js')(av),
-    Company: require('./business/Company.js')(av),
+  Business: require("./business/Business.js")(AV),
+  BusinessHour: require("./business/BusinessHour.js")(AV),
+  BusinessStatistics: require("./business/BusinessStatistics.js")(AV),
+  Company: require("./business/Company.js")(AV),
 
-    Address: require('./geographic/Address.js')(av),
-    City: require('./geographic/City.js')(av),
-    Province: require('./geographic/Province.js')(av),
+  Address: require("./geographic/Address.js")(AV),
+  City: require("./geographic/City.js")(AV),
+  Province: require("./geographic/Province.js")(AV),
 
-    Participation: require('./participation/Participation.js')(av),
-    ParticipationMember: require('./participation/Participation.js')(av),
-    PrivateMessage: require('./participation/PrivateMessage.js')(av),
+  Participation: require("./participation/Participation.js")(AV),
+  ParticipationMember: require("./participation/Participation.js")(AV),
+  PrivateMessage: require("./participation/PrivateMessage.js")(AV),
 
-    User: require('./user/User.js')(av),
-    Role: require('./user/Role.js')(av),
-    UserPhoto: require('./user/UserPhoto.js')(av),
-    UserProfile: require('./user/UserProfile.js')(av),
-    UserRole: require('./user/UserRole.js')(av),
-    UserStatistics: require('./user/UserStatistics.js')(av)
-};
+  User: require("./user/User.js")(AV),
+  Role: require("./user/Role.js")(AV),
+  UserPhoto: require("./user/UserPhoto.js")(AV),
+  UserProfile: require("./user/UserProfile.js")(AV),
+  UserRole: require("./user/UserRole.js")(AV),
+  UserStatistics: require("./user/UserStatistics.js")(AV)
+}
