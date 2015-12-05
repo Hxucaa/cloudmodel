@@ -3,7 +3,7 @@
 | Environment Initialization
 |--------------------------------------------------------------------------
 */
-"use strict"
+"use strict";
 
 /*
 |--------------------------------------------------------------------------
@@ -17,28 +17,28 @@ var Role = function(av) {
     initialize: function() {
       Object.defineProperty(this, "name", {
         get: function() {
-          return this.get("name")
+          return this.get("name");
         },
         set: function(value) {
-          this.set("name", value)
+          this.set("name", value);
         },
         enumerable: true
-      })
+      });
 
       Object.defineProperty(this, "isActive", {
         get: function() {
-          return this.get("isActive")
+          return this.get("isActive");
         },
         set: function(value) {
-          this.set("isActive", value)
+          this.set("isActive", value);
         },
         enumerable: true
-      })
+      });
     }
 
   }, {
 
-  })
-}
+  });
+};
 
-module.exports = Role
+module.exports = Role;

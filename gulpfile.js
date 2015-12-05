@@ -5,17 +5,20 @@
 "use strict";
 
 var gulp = require("gulp");
-var runSequence = require("run-sequence");
+//var runSequence = require("run-sequence");
 var gutil = require("gulp-util");
 var eslint = require("gulp-eslint");
 var shell = require("gulp-shell");
+var del = require("del");
+
+var jsdocConf = require("./jsdoc.conf.json");
 var pkg    = require("./package.json");
 
 gulp.task("default", function() {
 
 });
 
-gulp.task("lint", function () {
+gulp.task("lint", function() {
   // ESLint ignores files with "node_modules" paths.
   // So, it"s best to have gulp ignore the directory as well.
   // Also, Be sure to return the stream from the task;
@@ -40,17 +43,23 @@ gulp.task("lint:w", ["lint"], function() {
   gulp.watch(["models/**/*.js", "index.js"], ["lint"]);
 });
 
-gulp.task("jsdoc", function() {
+gulp.task("jsdoc", ["clean:jsdoc"], function() {
   return gulp
     .src(["models/**/*.js", "README.md"], {read: false})
-    .pipe(shell(["./node_modules/.bin/jsdoc -t ./node_modules/ink-docstrap/template -c jsdoc.conf.json"]));
+    .pipe(shell(["./node_modules/.bin/jsdoc -t ./node_modules/ink-docstrap/template -c jsdoc.conf.json"])); // eslint-disable-line max-len
+});
+
+gulp.task("clean:jsdoc", function() {
+  return del([
+    jsdocConf.opts.destination
+  ]);
 });
 
 gulp.task("watch", ["lint:w"]);
 
 gulp.task("help", function() {
   gutil.log("");
-  gutil.log("--- " + pkg.name + " Version: "+ pkg.version + " ---");
+  gutil.log("--- " + pkg.name + " Version: " + pkg.version + " ---");
   gutil.log("");
   gutil.log("See all of the available tasks:");
   gutil.log("$ gulp -T");
@@ -67,6 +76,6 @@ gulp.task("help", function() {
   gutil.log("Generate jsdoc");
   gutil.log("$ gulp jsdoc");
   gutil.log("");
-  gutil.log("--- " + pkg.name + " Version: "+ pkg.version + " ---");
+  gutil.log("--- " + pkg.name + " Version: " + pkg.version + " ---");
   gutil.log("");
 });

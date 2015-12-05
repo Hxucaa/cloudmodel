@@ -1,6 +1,6 @@
-"use strict"
+"use strict";
 
-var AV = require("avoscloud-sdk")
+var AV = require("avoscloud-sdk");
 
 module.exports = {
   Business: require("./business/Business.js")(AV),
@@ -27,4 +27,4 @@ module.exports = {
   ImageType: require("./enum/ImageType"),
   UserStatus: require("./enum/UserStatus"),
   UserType: require("./enum/UserType")
-}
+};

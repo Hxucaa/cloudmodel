@@ -3,7 +3,7 @@
 | Environment Initialization
 |--------------------------------------------------------------------------
 */
-"use strict"
+"use strict";
 
 /*
 |--------------------------------------------------------------------------
@@ -17,58 +17,58 @@ var BusinessHour = function(av) {
     initialize: function() {
       Object.defineProperty(this, "businessId", {
         get: function() {
-          return this.get("businessId")
+          return this.get("businessId");
         },
         set: function(value) {
-          this.set("businessId", value)
+          this.set("businessId", value);
         },
         enumerable: true
-      })
+      });
 
       Object.defineProperty(this, "day", {
         get: function() {
-          return this.get("day")
+          return this.get("day");
         },
         set: function(value) {
-          this.set("day", value)
+          this.set("day", value);
         },
         enumerable: true
-      })
+      });
 
       Object.defineProperty(this, "timeFrom", {
         get: function() {
-          return this.get("timeFrom")
+          return this.get("timeFrom");
         },
         set: function(value) {
-          this.set("timeFrom", value)
+          this.set("timeFrom", value);
         },
         enumerable: true
-      })
+      });
 
       Object.defineProperty(this, "timeEnd", {
         get: function() {
-          return this.get("timeEnd")
+          return this.get("timeEnd");
         },
         set: function(value) {
-          this.set("timeEnd", value)
+          this.set("timeEnd", value);
         },
         enumerable: true
-      })
+      });
 
       Object.defineProperty(this, "isActive", {
         get: function() {
-          return this.get("isActive")
+          return this.get("isActive");
         },
         set: function(value) {
-          this.set("isActive", value)
+          this.set("isActive", value);
         },
         enumerable: true
-      })
+      });
     }
 
   }, {
 
-  })
-}
+  });
+};
 
-module.exports = BusinessHour
+module.exports = BusinessHour;

@@ -2,18 +2,18 @@
  * Created by hxucaa on 2015-11-19.
  */
 
-"use strict"
+"use strict";
 
 /**
  * UserType enum of 2 values.
  * @readonly
  * @enum {number}
  */
-const UserType = {
+var UserType = {
   /** User */
   User: 1,
   /** Business */
   Business: 2
-}
+};
 
-module.exports = UserType
+module.exports = UserType;

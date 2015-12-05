@@ -2,7 +2,7 @@
  * Created by hxucaa on 2015-11-19.
  */
 
-"use strict"
+"use strict";
 
 
 /**
@@ -10,7 +10,7 @@
  * @readonly
  * @enum {number}
  */
-const UserStatus = {
+var UserStatus = {
   /** User not yet rergistered */
   NotRegistered: 0,
   /** User is registered */
@@ -21,6 +21,6 @@ const UserStatus = {
   ForgotPassword: 3,
   /** Account disabled */
   Disabled: 4
-}
+};
 
-module.exports = UserStatus
+module.exports = UserStatus;

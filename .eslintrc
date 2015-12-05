@@ -62,21 +62,8 @@
     "space-after-keywords": 2,
     "no-spaced-func": 2,
     // disallow use of semicolons instead of ASI (fixable)
-    "semi": [2, "never"],
+    "semi": [2, "always"],
     "max-len": [2, 100, 4, { "ignoreUrls": true, "ignorePattern": "\\brequire\\([\"']|eslint-disable|require" }],
-
-    // ECMAScript 6
-    // list: http://eslint.org/docs/rules/#ecmascript-6
-    // Suggest using 'const' wherever possible
-    "prefer-const": 2,
-    "prefer-arrow-callback": 2,
-    // disallow use of this/super before calling super() in constructors.
-    "no-this-before-super": 2,
-    "constructor-super": 2,
-    // Require space before/after arrow function's arrow
-    "arrow-spacing": 2,
-    // Require parens in arrow function argument as needed
-    "arrow-parens": [2, "as-needed"],
 
     // Strict Mode
     // list: https://github.com/eslint/eslint/tree/master/docs/rules#strict-mode

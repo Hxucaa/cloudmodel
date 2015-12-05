@@ -2,7 +2,7 @@
  * Created by hxucaa on 2015-11-19.
  */
 
-"use strict"
+"use strict";
 
 
 /**
@@ -10,13 +10,13 @@
  * @readonly
  * @enum {number}
  */
-const ImageType = {
+var ImageType = {
   /** Original image */
   Main: 1,
   /** Thumbnail */
   Thumbnail: 2,
   /** Portrait */
   Portrait: 3
-}
+};
 
-module.exports = ImageType
+module.exports = ImageType;

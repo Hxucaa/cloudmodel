@@ -1,12 +1,12 @@
 {
   "name": "cloudmodel",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "cloud code data models",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "node_modules/.bin/eslint . --fix",
-    "jsdoc": "./node_modules/.bin/jsdoc -t ./node_modules/ink-docstrap/template -c jsdoc.conf.json"
+    "jsdoc": "rm -rf ./jsdoc && ./node_modules/.bin/jsdoc -t ./node_modules/ink-docstrap/template -c jsdoc.conf.json"
   },
   "repository": {
     "type": "git",
@@ -15,9 +15,10 @@
   "author": "William Qi <wqi@lai.io> (http://lai.io)",
   "license": "MIT",
   "dependencies": {
-    "avoscloud-sdk": "^1.0.0-rc4"
+    "avoscloud-sdk": "^1.0.0-rc5"
   },
   "devDependencies": {
+    "del": "^2.1.0",
     "gulp": "^3.9.0",
     "gulp-eslint": "^1.1.0",
     "gulp-shell": "^0.5.1",

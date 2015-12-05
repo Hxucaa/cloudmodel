@@ -3,7 +3,7 @@
 | Environment Initialization
 |--------------------------------------------------------------------------
 */
-"use strict"
+"use strict";
 
 /*
 |--------------------------------------------------------------------------
@@ -17,38 +17,38 @@ var ParticipationMember = function(av) {
     initialize: function() {
       Object.defineProperty(this, "participationId", {
         get: function() {
-          return this.get("participationId")
+          return this.get("participationId");
         },
         set: function(value) {
-          this.set("participationId", value)
+          this.set("participationId", value);
         },
         enumerable: true
-      })
+      });
 
       Object.defineProperty(this, "userId", {
         get: function() {
-          return this.get("userId")
+          return this.get("userId");
         },
         set: function(value) {
-          this.set("userId", value)
+          this.set("userId", value);
         },
         enumerable: true
-      })
+      });
 
       Object.defineProperty(this, "isActive", {
         get: function() {
-          return this.get("isActive")
+          return this.get("isActive");
         },
         set: function(value) {
-          this.set("isActive", value)
+          this.set("isActive", value);
         },
         enumerable: true
-      })
+      });
     }
 
   }, {
 
-  })
-}
+  });
+};
 
-module.exports = ParticipationMember
+module.exports = ParticipationMember;
