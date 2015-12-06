@@ -1,3 +1,5 @@
 "use strict";
 
-module.exports = require("./models");
+module.exports = function(av) {
+  return require("./models")(av);
+};
