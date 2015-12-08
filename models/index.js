@@ -23,7 +23,7 @@ module.exports = function(AV) {
     UserStatus: require("./enum/UserStatus"),
     UserType: require("./enum/UserType"),
     AgeGroup: require("./enum/AgeGroup"),
-    Horoscope: require(".enum/Horoscope"),
-    Gender: require(".enum/Gender")
+    Horoscope: require("./enum/Horoscope"),
+    Gender: require("./enum/Gender")
   }
 };
