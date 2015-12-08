@@ -1,36 +1,26 @@
-/*
-|--------------------------------------------------------------------------
-| Environment Initialization
-|--------------------------------------------------------------------------
-*/
-"use strict";
 
-/*
-|--------------------------------------------------------------------------
-| Model Definition
-|--------------------------------------------------------------------------
-*/
+"use strict";
 
 var Participation = function(av) {
   return av.Object.extend("Participation", {
 
     initialize: function() {
-      Object.defineProperty(this, "userId", {
+      Object.defineProperty(this, "user", {
         get: function() {
-          return this.get("userId");
+          return this.get("user");
         },
         set: function(value) {
-          this.set("userId", value);
+          this.set("user", value);
         },
         enumerable: true
       });
 
-      Object.defineProperty(this, "businessId", {
+      Object.defineProperty(this, "business", {
         get: function() {
-          return this.get("businessId");
+          return this.get("business");
         },
         set: function(value) {
-          this.set("businessId", value);
+          this.set("business", value);
         },
         enumerable: true
       });

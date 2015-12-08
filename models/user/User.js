@@ -1,15 +1,6 @@
-/*
-|--------------------------------------------------------------------------
-| Environment Initialization
-|--------------------------------------------------------------------------
-*/
+
 "use strict";
 
-/*
-|--------------------------------------------------------------------------
-| Model Definition
-|--------------------------------------------------------------------------
-*/
 
 var User = function(av) {
   return av.Object.extend("_User", {
@@ -51,6 +42,16 @@ var User = function(av) {
         },
         set: function(value) {
           this.set("sessionToken", value);
+        },
+        enumerable: true
+      });
+
+      Object.defineProperty(this, "authData", {
+        get: function() {
+          return this.get("authData");
+        },
+        set: function(value) {
+          this.set("authData", value);
         },
         enumerable: true
       });
@@ -121,6 +122,116 @@ var User = function(av) {
         },
         set: function(value) {
           this.set("isActive", value);
+        },
+        enumerable: true
+      });
+
+      Object.defineProperty(this, "nickname", {
+        get: function() {
+          return this.get("nickname");
+        },
+        set: function(value) {
+          this.set("nickname", value);
+        },
+        enumerable: true
+      });
+
+      Object.defineProperty(this, "gender", {
+        get: function() {
+          return this.get("gender");
+        },
+        set: function(value) {
+          this.set("gender", value);
+        },
+        enumerable: true
+      });
+
+      Object.defineProperty(this, "birthday", {
+        get: function() {
+          return this.get("birthday");
+        },
+        set: function(value) {
+          this.set("birthday", value);
+        },
+        enumerable: true
+      });
+
+      Object.defineProperty(this, "ageGroup", {
+        get: function() {
+          return this.get("ageGroup");
+        },
+        set: function(value) {
+          this.set("ageGroup", value);
+        },
+        enumerable: true
+      });
+
+      Object.defineProperty(this, "horoscope", {
+        get: function() {
+          return this.get("horoscope");
+        },
+        set: function(value) {
+          this.set("horoscope", value);
+        },
+        enumerable: true
+      });
+
+      //Object.defineProperty(this, "address", {
+      //  get: function() {
+      //    return this.get("address");
+      //  },
+      //  set: function(value) {
+      //    this.set("address", value);
+      //  },
+      //  enumerable: true
+      //});
+
+      Object.defineProperty(this, "coverPhoto", {
+        get: function() {
+          return this.get("coverPhoto");
+        },
+        set: function(value) {
+          this.set("coverPhoto", value);
+        },
+        enumerable: true
+      });
+
+      Object.defineProperty(this, "latestLocation", {
+        get: function() {
+          return this.get("latestLocation");
+        },
+        set: function(value) {
+          this.set("latestLocation", value);
+        },
+        enumerable: true
+      });
+
+      Object.defineProperty(this, "aaCount", {
+        get: function() {
+          return this.get("aaCount");
+        },
+        set: function(value) {
+          this.set("aaCount", value);
+        },
+        enumerable: true
+      });
+
+      Object.defineProperty(this, "treatCount", {
+        get: function() {
+          return this.get("treatCount");
+        },
+        set: function(value) {
+          this.set("treatCount", value);
+        },
+        enumerable: true
+      });
+
+      Object.defineProperty(this, "toGoCount", {
+        get: function() {
+          return this.get("toGoCount");
+        },
+        set: function(value) {
+          this.set("toGoCount", value);
         },
         enumerable: true
       });
