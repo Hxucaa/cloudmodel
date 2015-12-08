@@ -1,5 +1,5 @@
 /**
- * Created by hxucaa on 2015-11-19.
+ * Created by Lance Zhu on 2015-11-19.
  */
 
 "use strict";

@@ -15,12 +15,15 @@ module.exports = function(AV) {
     //PrivateMessage: require("./participation/PrivateMessage.js")(AV),
 
     User: require("./user/User.js")(AV),
-    Role: require("./user/Role.js")(AV)
+    Role: require("./user/Role.js")(AV),
     //UserPhoto: require("./user/UserPhoto.js")(AV),
 
     // Enums
-    //ImageType: require("./enum/ImageType"),
-    //UserStatus: require("./enum/UserStatus"),
-    //UserType: require("./enum/UserType")
+    ImageType: require("./enum/ImageType"),
+    UserStatus: require("./enum/UserStatus"),
+    UserType: require("./enum/UserType"),
+    AgeGroup: require("./enum/AgeGroup"),
+    Horoscope: require(".enum/Horoscope"),
+    Gender: require(".enum/Gender")
   }
 };
