@@ -4,22 +4,22 @@ var Business = function(av) {
   return av.Object.extend("Business", {
 
     initialize: function() {
-      Object.defineProperty(this, "userId", {
+      Object.defineProperty(this, "user", {
         get: function() {
-          return this.get("userId");
+          return this.get("user");
         },
         set: function(value) {
-          this.set("userId", value);
+          this.set("user", value);
         },
         enumerable: true
       });
 
-      Object.defineProperty(this, "companyId", {
+      Object.defineProperty(this, "company", {
         get: function() {
-          return this.get("companyId");
+          return this.get("company");
         },
         set: function(value) {
-          this.set("companyId", value);
+          this.set("company", value);
         },
         enumerable: true
       });
@@ -64,7 +64,7 @@ var Business = function(av) {
         enumerable: true
       });
 
-      Object.defineProperty(this, "addressId", {
+      Object.defineProperty(this, "address", {
         get: function() {
           return this.get("addressId");
         },

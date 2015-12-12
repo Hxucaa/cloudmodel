@@ -23,22 +23,22 @@ var Address = function(av) {
         enumerable: true
       });
 
-      Object.defineProperty(this, "cityId", {
+      Object.defineProperty(this, "city", {
         get: function() {
-          return this.get("cityId");
+          return this.get("city");
         },
         set: function(value) {
-          this.set("cityId", value);
+          this.set("city", value);
         },
         enumerable: true
       });
 
-      Object.defineProperty(this, "provinceId", {
+      Object.defineProperty(this, "province", {
         get: function() {
-          return this.get("provinceId");
+          return this.get("province");
         },
         set: function(value) {
-          this.set("provinceId", value);
+          this.set("province", value);
         },
         enumerable: true
       });

@@ -24,12 +24,12 @@ var Province = function(av) {
         enumerable: true
       });
 
-      Object.defineProperty(this, "countryId", {
+      Object.defineProperty(this, "country", {
         get: function() {
-          return this.get("countryId");
+          return this.get("country");
         },
         set: function(value) {
-          this.set("countryId", value);
+          this.set("country", value);
         },
         enumerable: true
       });

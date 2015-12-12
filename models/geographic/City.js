@@ -25,12 +25,12 @@ var City = function(av) {
         enumerable: true
       });
 
-      Object.defineProperty(this, "provinceId", {
+      Object.defineProperty(this, "province", {
         get: function() {
-          return this.get("provinceId");
+          return this.get("province");
         },
         set: function(value) {
-          this.set("provinceId", value);
+          this.set("province", value);
         },
         enumerable: true
       });

@@ -4,12 +4,12 @@ var BusinessHour = function(av) {
   return av.Object.extend("BusinessHour", {
 
     initialize: function() {
-      Object.defineProperty(this, "businessId", {
+      Object.defineProperty(this, "business", {
         get: function() {
-          return this.get("businessId");
+          return this.get("business");
         },
         set: function(value) {
-          this.set("businessId", value);
+          this.set("business", value);
         },
         enumerable: true
       });
