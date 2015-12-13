@@ -3,42 +3,22 @@
 var Address = function(av) {
   return av.Object.extend("Address", {
     initialize: function() {
-      Object.defineProperty(this, "streetLine1", {
+      Object.defineProperty(this, "street", {
         get: function() {
-          return this.get("streetLine1");
+          return this.get("street");
         },
         set: function(value) {
-          this.set("streetLine1", value);
+          this.set("street", value);
         },
         enumerable: true
       });
 
-      Object.defineProperty(this, "streetLine2", {
+      Object.defineProperty(this, "region", {
         get: function() {
-          return this.get("streetLine2");
+          return this.get("region");
         },
         set: function(value) {
-          this.set("streetLine2", value);
-        },
-        enumerable: true
-      });
-
-      Object.defineProperty(this, "city", {
-        get: function() {
-          return this.get("city");
-        },
-        set: function(value) {
-          this.set("city", value);
-        },
-        enumerable: true
-      });
-
-      Object.defineProperty(this, "province", {
-        get: function() {
-          return this.get("province");
-        },
-        set: function(value) {
-          this.set("province", value);
+          this.set("region", value);
         },
         enumerable: true
       });

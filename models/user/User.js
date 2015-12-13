@@ -174,15 +174,15 @@ var User = function(av) {
         enumerable: true
       });
 
-      //Object.defineProperty(this, "address", {
-      //  get: function() {
-      //    return this.get("address");
-      //  },
-      //  set: function(value) {
-      //    this.set("address", value);
-      //  },
-      //  enumerable: true
-      //});
+      Object.defineProperty(this, "address", {
+        get: function() {
+          return this.get("address");
+        },
+        set: function(value) {
+          this.set("address", value);
+        },
+        enumerable: true
+      });
 
       Object.defineProperty(this, "coverPhoto", {
         get: function() {

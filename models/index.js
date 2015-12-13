@@ -6,9 +6,8 @@ module.exports = function(AV) {
     //BusinessHour: require("./business/BusinessHour.js")(AV),
     //Company: require("./business/Company.js")(AV),
 
-    //Address: require("./geographic/Address.js")(AV),
-    //City: require("./geographic/City.js")(AV),
-    //Province: require("./geographic/Province.js")(AV),
+    Address: require("./geographic/Address.js")(AV),
+    Region: require("./geographic/Region.js")(AV),
 
     Participation: require("./participation/Participation.js")(AV),
     //ParticipationMember: require("./participation/Participation.js")(AV),

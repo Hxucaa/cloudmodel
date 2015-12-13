@@ -66,10 +66,10 @@ var Business = function(av) {
 
       Object.defineProperty(this, "address", {
         get: function() {
-          return this.get("addressId");
+          return this.get("address");
         },
         set: function(value) {
-          this.set("addressId", value);
+          this.set("address", value);
         },
         enumerable: true
       });
