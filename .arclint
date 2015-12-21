@@ -1,0 +1,9 @@
+{
+  "linters": {
+    "ESLint": {
+      "type": "eslint",
+      "include": "(\\.js$)",
+      "exclude": "((^dist/)|(^jsdoc/)|(^coverage/))"
+    }
+  }
+}

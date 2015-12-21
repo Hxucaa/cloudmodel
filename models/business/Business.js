@@ -1,6 +1,11 @@
 "use strict";
 
 var Business = function(av) {
+  /**
+   * @constructor Business
+   * @extends esternal:AV.Object
+   * @memberof cloudmodel
+   */
   return av.Object.extend("Business", {
 
     initialize: function() {

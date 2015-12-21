@@ -4,10 +4,13 @@
 
 "use strict";
 
+var deepFreeze = require("../utility/deepFreeze");
+
 /**
  * UserType enum of 2 values.
  * @readonly
  * @enum {number}
+ * @memberof cloudmodel
  */
 var UserType = {
   /** User */
@@ -15,5 +18,7 @@ var UserType = {
   /** Business */
   Business: 2
 };
+
+deepFreeze(UserType);
 
 module.exports = UserType;

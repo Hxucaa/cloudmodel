@@ -1,0 +1,74 @@
+{
+  "parser": "babel-eslint",
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "blockBindings": true,
+    "classes": true,
+    "defaultParams": true,
+    "destructuring": true,
+    "forOf": true,
+    "generators": false,
+    "modules": true,
+    "objectLiteralComputedProperties": true,
+    "objectLiteralDuplicateProperties": false,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShorthandProperties": true,
+    "restParams": true,
+    "spread": true,
+    "superInFunctions": true,
+    "templateStrings": true
+  },
+  "plugins": [
+    "import",
+    "mocha"
+  ],
+  "env": {
+    "es6": true,
+    "mocha": true
+  },
+  "globals": {
+    "expect": true,
+    "assert": true,
+    "AV": true
+  },
+  "rules": {
+    "semi": [2, "always"],
+    "init-declarations": 0,
+    "max-nested-callbacks": 0,
+    "no-unused-expressions": 0,
+
+    // ECMAScript 6
+    "prefer-arrow-callback": 2,
+    "no-this-before-super": 1,
+    "arrow-spacing": 2,
+    "arrow-parens": 0,
+    "constructor-super": 2,
+    // require let or const instead of var
+    "no-var": 2,
+    "no-arrow-condition": 2,
+    "no-class-assign": 2,
+    // disallow modifying variables that are declared using const
+    "no-const-assign": 2,
+    "no-dupe-class-members": 2,
+    "object-shorthand": 2,
+    "prefer-const": 2,
+    "prefer-reflect": 1,
+    "prefer-spread": 1,
+    "prefer-template": 2,
+
+    // eslint-plugin-mocha
+    "mocha/no-exclusive-tests": 2,
+    "mocha/no-global-tests": 2,
+
+    // eslint-plugin-import
+    //    "import/no-unresolved": [2, {"commonjs": true}],
+    "import/named": 0,
+    "import/default": 0,
+    "import/namespace": 0,
+    "import/no-require": 2,
+    "import/no-named-as-default": 0,
+    "import/export": 2,
+    "import/no-duplicates": 2,
+    "import/imports-first": 0
+  }
+}

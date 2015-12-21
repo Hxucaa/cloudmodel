@@ -4,10 +4,13 @@
 
 "use strict";
 
+var deepFreeze = require("../utility/deepFreeze");
+
 /**
  * AgeGroup enum of 12 values.
  * @readonly
  * @enum {number}
+ * @memberof cloudmodel
  */
 var AgeGroup = {
   /** the birthday year is between 1910 and 1919 */
@@ -35,5 +38,7 @@ var AgeGroup = {
   /** the birthday year is between 2020 and 2029 */
   Group120: 120
 };
+
+deepFreeze(AgeGroup);
 
 module.exports = AgeGroup;

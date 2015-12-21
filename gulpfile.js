@@ -5,17 +5,50 @@
 "use strict";
 
 var gulp = require("gulp");
-//var runSequence = require("run-sequence");
+var runSequence = require("run-sequence");
+var mocha = require("gulp-spawn-mocha");
 var gutil = require("gulp-util");
 var eslint = require("gulp-eslint");
 var shell = require("gulp-shell");
 var del = require("del");
 
 var jsdocConf = require("./jsdoc.conf.json");
-var pkg    = require("./package.json");
+var pkg = require("./package.json");
 
 gulp.task("default", function() {
 
+});
+
+gulp.task("test:package", function() {
+
+  process.env.NODE_ENV = "test";
+
+  return gulp
+    .src(["test/package/**/*.js"], { read: false })
+    .pipe(mocha({
+      compilers: "js:babel-core/register",
+      reporter: "spec",
+      timeout: 5000,
+      ignoreLeaks: false,
+      recursive: true,
+      harmony: true
+    }))
+    .on("error", gutil.log);
+});
+
+gulp.task("test", function(callback) {
+  runSequence(
+    "lint",
+    "test:package",
+    callback
+  );
+});
+
+gulp.task("test:w", ["test:package"], function() {
+  gulp.watch(
+    ["models/**", "test/**"],
+    ["test:package"]
+  );
 });
 
 gulp.task("lint", function() {
@@ -45,8 +78,12 @@ gulp.task("lint:w", ["lint"], function() {
 
 gulp.task("jsdoc", ["clean:jsdoc"], function() {
   return gulp
-    .src(["models/**/*.js", "README.md"], {read: false})
+    .src([], { read: false })
     .pipe(shell(["./node_modules/.bin/jsdoc -t ./node_modules/ink-docstrap/template -c jsdoc.conf.json"])); // eslint-disable-line max-len
+});
+
+gulp.task("jsdoc:w", ["jsdoc"], function() {
+  gulp.watch(["models/**", "index.js"], ["jsdoc"]);
 });
 
 gulp.task("clean:jsdoc", function() {
@@ -55,7 +92,7 @@ gulp.task("clean:jsdoc", function() {
   ]);
 });
 
-gulp.task("watch", ["lint:w"]);
+gulp.task("watch", ["lint:w", "test:w", "jsdoc:w"]);
 
 gulp.task("help", function() {
   gutil.log("");

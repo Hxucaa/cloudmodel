@@ -4,10 +4,13 @@
 
 "use strict";
 
+var deepFreeze = require("../utility/deepFreeze");
+
 /**
  * Horoscope enum of 12 values.
  * @readonly
  * @enum {number}
+ * @memberof cloudmodel
  */
 var Horoscope = {
   Capricorn: 1,
@@ -23,5 +26,7 @@ var Horoscope = {
   Scorpio: 11,
   Sagittarius: 12
 };
+
+deepFreeze(Horoscope);
 
 module.exports = Horoscope;

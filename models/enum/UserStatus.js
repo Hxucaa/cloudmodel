@@ -4,11 +4,13 @@
 
 "use strict";
 
+var deepFreeze = require("../utility/deepFreeze");
 
 /**
  * UserStatus enum of 5 values.
  * @readonly
  * @enum {number}
+ * @memberof cloudmodel
  */
 var UserStatus = {
   /** User not yet rergistered */
@@ -22,5 +24,7 @@ var UserStatus = {
   /** Account disabled */
   Disabled: 4
 };
+
+deepFreeze(UserStatus);
 
 module.exports = UserStatus;

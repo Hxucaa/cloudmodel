@@ -1,6 +1,11 @@
 "use strict";
 
 var Address = function(av) {
+  /**
+   * @constructor Address
+   * @extends esternal:AV.Object
+   * @memberof cloudmodel
+   */
   return av.Object.extend("Address", {
     initialize: function() {
       Object.defineProperty(this, "street", {

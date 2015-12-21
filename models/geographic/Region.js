@@ -4,6 +4,11 @@
 "use strict";
 
 var Region = function(av) {
+  /**
+   * @constructor Region
+   * @extends esternal:AV.Object
+   * @memberof cloudmodel
+   */
   return av.Object.extend("L_Region", {
     initialize: function() {
       Object.defineProperty(this, "code", {

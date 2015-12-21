@@ -1,9 +1,19 @@
 "use strict";
 
 var User = function(av) {
+
+  /**
+   * @constructor User
+   * @extends external:AV.User
+   * @memberof cloudmodel
+   */
   return av.Object.extend("_User", {
 
-    initialize: function() {
+    initialize: function() {  // eslint-disable-line max-statements
+      /**
+       * @name User#mobilePhoneNumber
+       * @type {string}
+       */
       Object.defineProperty(this, "mobilePhoneNumber", {
         get: function() {
           return this.get("mobilePhoneNumber");
@@ -14,6 +24,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#mobilePhoneNumberVerified
+       * @type {boolean}
+       */
       Object.defineProperty(this, "mobilePhoneNumberVerified", {
         get: function() {
           return this.get("mobilePhoneNumberVerified");
@@ -24,6 +38,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#salt
+       * @type {string}
+       */
       Object.defineProperty(this, "salt", {
         get: function() {
           return this.get("salt");
@@ -34,6 +52,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#sessionToken
+       * @type {string}
+       */
       Object.defineProperty(this, "sessionToken", {
         get: function() {
           return this.get("sessionToken");
@@ -44,6 +66,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#authData
+       * @type {string}
+       */
       Object.defineProperty(this, "authData", {
         get: function() {
           return this.get("authData");
@@ -54,6 +80,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#email
+       * @type {string}
+       */
       Object.defineProperty(this, "email", {
         get: function() {
           return this.get("email");
@@ -64,6 +94,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#emailVerified
+       * @type {boolean}
+       */
       Object.defineProperty(this, "emailVerified", {
         get: function() {
           return this.get("emailVerified");
@@ -74,6 +108,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#username
+       * @type {string}
+       */
       Object.defineProperty(this, "username", {
         get: function() {
           return this.get("username");
@@ -84,6 +122,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#password
+       * @type {string}
+       */
       Object.defineProperty(this, "password", {
         get: function() {
           return this.get("password");
@@ -94,6 +136,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#type
+       * @type {number|UserType}
+       */
       Object.defineProperty(this, "type", {
         get: function() {
           return this.get("type");
@@ -104,6 +150,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#status
+       * @type {number|UserStatus}
+       */
       Object.defineProperty(this, "status", {
         get: function() {
           return this.get("status");
@@ -114,6 +164,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#isActive
+       * @type {boolean|Activation}
+       */
       Object.defineProperty(this, "isActive", {
         get: function() {
           return this.get("isActive");
@@ -124,6 +178,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#nickname
+       * @type {string}
+       */
       Object.defineProperty(this, "nickname", {
         get: function() {
           return this.get("nickname");
@@ -134,6 +192,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#gender
+       * @type {number|Gender}
+       */
       Object.defineProperty(this, "gender", {
         get: function() {
           return this.get("gender");
@@ -144,6 +206,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#birthday
+       * @type {date}
+       */
       Object.defineProperty(this, "birthday", {
         get: function() {
           return this.get("birthday");
@@ -154,6 +220,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#ageGroup
+       * @type {number|AgeGroup}
+       */
       Object.defineProperty(this, "ageGroup", {
         get: function() {
           return this.get("ageGroup");
@@ -164,6 +234,10 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * @name User#horoscope
+       * @type {number|Horoscope}
+       */
       Object.defineProperty(this, "horoscope", {
         get: function() {
           return this.get("horoscope");
@@ -174,6 +248,12 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * 住址.
+       * A pointer pointing to an address object.
+       * @name User#address
+       * @type {Address}
+       */
       Object.defineProperty(this, "address", {
         get: function() {
           return this.get("address");
@@ -184,6 +264,11 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * 头像照片
+       * @name User#coverPhoto
+       * @type {external:AV.File}
+       */
       Object.defineProperty(this, "coverPhoto", {
         get: function() {
           return this.get("coverPhoto");
@@ -194,6 +279,26 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * 用户个人状态消息
+       * @name User#whatsUp
+       * @type {string}
+       */
+      Object.defineProperty(this, "whatsUp", {
+        get: function() {
+          return this.get("whatsUp");
+        },
+        set: function(value) {
+          this.set("whatsUp", value);
+        },
+        enumerable: true
+      });
+
+      /**
+       * Latest whereabouts of user
+       * @name User#latestLocation
+       * @type {external:AV.GeoPoint}
+       */
       Object.defineProperty(this, "latestLocation", {
         get: function() {
           return this.get("latestLocation");
@@ -204,6 +309,11 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * 和他人aa过几次的统计
+       * @name User#aaCount
+       * @type {number}
+       */
       Object.defineProperty(this, "aaCount", {
         get: function() {
           return this.get("aaCount");
@@ -214,6 +324,11 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * 请过几次客的统计
+       * @name User#treatCount
+       * @type {number}
+       */
       Object.defineProperty(this, "treatCount", {
         get: function() {
           return this.get("treatCount");
@@ -224,6 +339,11 @@ var User = function(av) {
         enumerable: true
       });
 
+      /**
+       * 参与过几次活动的统计
+       * @name User#toGoCount
+       * @type {number}
+       */
       Object.defineProperty(this, "toGoCount", {
         get: function() {
           return this.get("toGoCount");
